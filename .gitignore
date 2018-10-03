@@ -1,0 +1,7 @@
+a.out
+*.swp
+topspin
+*.sudo
+*.o
+*.s
+TODO

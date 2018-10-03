@@ -1,0 +1,210 @@
+Script started on Mon 28 Sep 2015 10:45:19 AM EDT
+]0;ryan@scub: ~/Documents/AI/topspinryan@scub:~/Documents/AI/topspin$ make clean
+rm -f topspin *.o *.s
+]0;ryan@scub: ~/Documents/AI/topspinryan@scub:~/Documents/AI/topspin$ make
+g++ -std=c++11 -g main.cpp topspin.cpp randomizer.cpp node.cpp ida.cpp -o topspin
+]0;ryan@scub: ~/Documents/AI/topspinryan@scub:~/Documents/AI/topspin$ ./topspin
+
+i. Info for Current Node
+g. Generate children for Current Node
+d. Switch to child
+u. Switch to parent
+n. Generate new tree
+s. Run IDA* (fingers crossed)
+t. Trace out solution
+p. Print this menu
+q. Quit
+
+
+Enter choice: n
+
+Enter random number of moves for puzzle (-1 to cancel): 20
+>s
+
+##############################
+FOUND IT!
+##############################
+>t
+
+##############################
+Number of moves: 19
+##############################
+Operation: x
+Direction: x
+##############################
+
+Operation: r
+Direction: l
+##############################
+
+Operation: s
+Direction: x
+##############################
+
+Operation: r
+Direction: r
+##############################
+
+Operation: s
+Direction: x
+##############################
+
+Operation: r
+Direction: r
+##############################
+
+Operation: s
+Direction: x
+##############################
+
+Operation: r
+Direction: r
+##############################
+
+Operation: s
+Direction: x
+##############################
+
+Operation: r
+Direction: r
+##############################
+
+Operation: s
+Direction: x
+##############################
+
+Operation: r
+Direction: l
+##############################
+
+Operation: r
+Direction: l
+##############################
+
+Operation: s
+Direction: x
+##############################
+
+Operation: r
+Direction: r
+##############################
+
+Operation: s
+Direction: x
+##############################
+
+Operation: r
+Direction: r
+##############################
+
+Operation: s
+Direction: x
+##############################
+
+Operation: r
+Direction: r
+##############################
+
+Operation: s
+Direction: x
+##############################
+>p
+
+i. Info for Current Node
+g. Generate children for Current Node
+d. Switch to child
+u. Switch to parent
+n. Generate new tree
+s. Run IDA* (fingers crossed)
+t. Trace out solution
+p. Print this menu
+q. Quit
+
+>i
+
+##############################
+Exhausted: 1
+Leaf: 0
+Depth: 0
+Heuristic: 4
+parent (addr): 0
+Size of <vect> children: 3
+The move from the parent: x, x
+Puzzle->print() output: 
+ 17 2 3 4 1 5 6 7 8 9 10 11 12 13 14 15 0 19 18 16
+ ^                                        ^        
+
+##############################
+>d
+
+Child index (0-1, 0-2 for root, -1 cancel): 0
+>i
+
+##############################
+Exhausted: 1
+Leaf: 0
+Depth: 1
+Heuristic: 4
+parent (addr): 0x6591c0
+Size of <vect> children: 2
+The move from the parent: r, l
+Puzzle->print() output: 
+ 17 2 3 4 1 5 6 7 8 9 10 11 12 13 14 15 0 19 18 16
+                                        ^       ^  
+
+##############################
+>d
+
+Child index (0-1, 0-2 for root, -1 cancel): 1
+>i
+
+##############################
+Exhausted: 0
+Leaf: 0
+Depth: 2
+Heuristic: 4
+parent (addr): 0x6594b0
+Size of <vect> children: 0
+The move from the parent: r, l
+Puzzle->print() output: 
+ 17 2 3 4 1 5 6 7 8 9 10 11 12 13 14 15 0 19 18 16
+                                     ^       ^     
+
+##############################
+>u
+>i
+
+##############################
+Exhausted: 1
+Leaf: 0
+Depth: 1
+Heuristic: 4
+parent (addr): 0x6591c0
+Size of <vect> children: 2
+The move from the parent: r, l
+Puzzle->print() output: 
+ 17 2 3 4 1 5 6 7 8 9 10 11 12 13 14 15 0 19 18 16
+                                        ^       ^  
+
+##############################
+>u
+>i
+
+##############################
+Exhausted: 1
+Leaf: 0
+Depth: 0
+Heuristic: 4
+parent (addr): 0
+Size of <vect> children: 3
+The move from the parent: x, x
+Puzzle->print() output: 
+ 17 2 3 4 1 5 6 7 8 9 10 11 12 13 14 15 0 19 18 16
+ ^                                        ^        
+
+##############################
+>q
+]0;ryan@scub: ~/Documents/AI/topspinryan@scub:~/Documents/AI/topspin$ c[Kexit
+exit
+
+Script done on Mon 28 Sep 2015 10:46:24 AM EDT
